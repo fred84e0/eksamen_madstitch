@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="robots" content="noindex">
+
+    <title>Forhandlerlisten</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img id="logo" src="img/logo.svg"></a>
+        <div id="burger-button">
+            <div class="burger-bar"></div>
+            <div class="burger-bar"></div>
+            <div class="burger-bar"></div>
+        </div>
+
+    </header>
+    <nav id="menu-left">
+        <a href="index.html">
+            <img id="logo" src="img/logo.svg"></a>
+        <ul>
+            <li><a href="index.html">Forside</a></li>
+            <li><a href="gallery.html">Galleri</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li>Punkt4</li>
+            <li>Punkt5</li>
+        </ul>
+    </nav>
+
+    <main>
+
+
+
+        <h1 id="forhandler_h1">Forhandlere</h1>
+
+        <div id="understreger">
+            <div id="understreg1"></div>
+            <div id="understreg2"></div>
+        </div>
+
+        <div id="forhandler-container">
+
+
+        </div>
+
+        <template>
+
+            <div class="forhandler_pic">
+                <a class="forhandler_link" target="_blank">
+                    <div class="forhandler_tekst">
+                        <h2 class="forhandler_navn"> </h2>
+                        <p class="forhandler_adresse"> </p>
+                    </div>
+                </a>
+            </div>
+
+
+
+        </template>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", hentJsonForhandler);
+    console.log("Forhandlersiden");
+
+    let forhandlere = [];
+
+    async function hentJsonForhandler() {
+        const url = "http://home8.dk/kea/semester2/cms/madstitch/wordpress/wp-json/wp/v2/forhandlere?99"
+        const myJson = await fetch(url);
+        forhandlere = await myJson.json();
+
+        visForhandlere();
+    }
+
+    function visForhandlere() {
+        let temp = document.querySelector("template");
+        let dest = document.querySelector("#forhandler-container");
+        document.querySelector("#forhandler-container").innerHTML = "";
+        forhandlere.forEach(forhandler => {
+            let klon = temp.cloneNode(true).content;
+            klon.querySelector(".forhandler_pic").style.backgroundImage = `url(${forhandler.baggrundsbillede.guid})`
+            klon.querySelector(".forhandler_navn").innerHTML = forhandler.forhandler_navn;
+            klon.querySelector(".forhandler_adresse").innerHTML = forhandler.adresse;
+
+            klon.querySelector(".forhandler_link").href = forhandler.link_til_forhandlesite;
+
+            dest.appendChild(klon);
+
+        })
+
+        console.log(forhandlere);
+
+    }
+</script>
+
+</html>

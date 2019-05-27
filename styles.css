@@ -1,0 +1,442 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #EAEAEA;
+}
+
+/*-----------------Header-----------------*/
+header {
+    background-color: #EAEAEA;
+    height: 25vw;
+    width: 100vw;
+    max-height: 250px;
+}
+
+#logo {
+    padding: 3vw 0 0 3vw;
+    max-width: 20vw;
+}
+
+
+
+/*-----------------Header-----------------*/
+
+main {
+    height: 100vh;
+}
+
+/*-------------------Menu--------------------*/
+
+#menu-left {
+    background-color: aquamarine;
+    width: 100vw;
+    min-height: 100%;
+    position: fixed;
+    z-index: 2;
+
+    top: 0;
+    display: none;
+    padding-top: 30vw;
+}
+
+#menu-left li {
+    padding: 10vw 0 0 0;
+    list-style-type: none;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+
+#burger-button {
+    top: 16px;
+    float: right;
+    position: fixed;
+    right: 25px;
+    padding: 5px 5px;
+    z-index: 3;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+.burger-bar {
+    width: 40px;
+    height: 6px;
+    background-color: #665e51;
+    margin: 6px 0;
+}
+
+
+
+/*-------------------Menu--------------------*/
+
+#img-container {
+    height: 100%;
+    width: 100%;
+    float: right;
+    display: block;
+}
+
+.img1 {
+    width: 50vw;
+}
+
+.img1:nth-child(1) {
+    width: 40vw;
+}
+
+.img1:nth-child(3) {
+    width: 30vw;
+    float: right;
+
+}
+
+
+.img1:nth-child(5) {
+    width: 40vw;
+}
+
+
+
+.billede_navn {
+    background-color: white;
+    padding: 1vw;
+    max-width: 12vw;
+}
+
+
+
+
+
+
+/*---------------------Galleri----------------------*/
+
+.masonry_gallery {
+    /* Masonry container */
+    column-count: 2;
+    column-gap: 2vw;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 2vw;
+
+}
+
+.item {
+    /* Masonry bricks or child elements */
+    background-color: #eee;
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 1vw 0;
+    cursor: pointer;
+
+}
+
+.galleri_billede img {
+    width: 85vw;
+    margin: 0 auro;
+}
+
+/*---------------------Galleri----------------------*/
+/*------------------------ Event ----------------------*/
+
+.event_container {
+    margin: 0 auto;
+}
+
+.event_tekst_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 4;
+    width: 70vw;
+    min-height: 40vw;
+    transition: background-color 0.7s ease;
+    background-color: rgba(255, 255, 255, 0.0);
+    color: white;
+
+}
+
+.event_tekst_box:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.event_single {
+    padding: 0 0 5vw 0;
+    text-align: center;
+
+}
+
+.event_billede {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 70vw;
+    min-height: 40vw;
+    z-index: 1;
+    display: inline-block;
+
+
+}
+
+.event_billede p,
+.event_billede h2 {
+    transition: color 0.7s ease;
+    z-index: 100;
+    align-content: center;
+
+}
+
+.event_overskrift {}
+
+.event_tekst {}
+
+.event_dato {}
+
+.event_sted {}
+
+.fyn {
+    background-color: red;
+}
+
+.sjaelland {
+    background-color: yellow;
+}
+
+.jylland {
+    background-color: green;
+}
+
+.float_right {
+    float: right;
+
+}
+
+.filterknap .valgt {
+    transform: scale(1.05);
+    color: #8D8277;
+}
+
+
+/*------------------------ Event ------------------------*/
+
+
+/*---------------------Forhandlere----------------------*/
+
+#forhandler_h1 {
+    text-align: right;
+    margin-right: 3vw;
+
+}
+
+#understreger {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    justify-content: flex-end;
+}
+
+#understreg1 {
+    background-color: black;
+    height: 1px;
+    width: 210px;
+    margin-left: 8vw;
+
+}
+
+#understreg2 {
+    background-color: black;
+    height: 1px;
+    width: 210px;
+    margin-top: 10px;
+    margin-left: 5vw;
+
+}
+
+#forhandler-container {
+    margin-top: 15vw;
+}
+
+.forhandler_link {
+    color: white;
+    transition: color 0.7s ease;
+}
+
+.forhandler_link:hover {
+    color: black;
+}
+
+.forhandler_pic {
+
+
+    margin: 5vw auto;
+    width: 90vw;
+    height: 25vw;
+    background-size: cover;
+}
+
+.forhandler_tekst {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90vw;
+    height: 25vw;
+    transition: background-color 0.9s ease;
+    background-color: rgba(240, 248, 255, 0.39);
+}
+
+.forhandler_tekst:hover {
+
+    background-color: rgba(240, 248, 255, 0.8);
+}
+
+
+
+.forhandler_navn {
+    align-self: center;
+
+
+}
+
+.forhandler_adresse {
+    align-self: center;
+}
+
+
+
+
+
+/*---------------------Forhandlere slut----------------------*/
+
+/*----------------------Media IPAD ----------------------------*/
+
+@media only screen and (min-width: 767px) {
+
+    #menu-left {
+        background-color: #EAEAEA;
+        width: 25vw;
+        min-height: 100%;
+        padding-top: 0vw;
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    main {
+        width: 75vw;
+        float: right;
+        margin-top: 15vw;
+    }
+
+    header {
+        display: none;
+    }
+
+    #burger-button {
+        display: none;
+    }
+
+    /*---- Galleri----*/
+    .masonry_gallery {
+        column-count: 3;
+        column-gap: 2vw;
+        width: 70vw;
+        margin: 0;
+        padding: 2vw 2vw 2vw 27.5vw;
+    }
+
+    /*---- Galleri----*/
+    #img-container {
+        height: 100%;
+        width: 70vw;
+        float: right;
+        display: block;
+    }
+
+
+    .forhandler_pic {
+
+
+        margin: 5vw auto;
+        width: 62.5vw;
+        height: 20vw;
+    }
+
+    .forhandler_tekst {
+
+        width: 62.5vw;
+        height: 20vw;
+
+    }
+
+
+
+
+
+
+}
+
+/*----------------------Media IPAD ----------------------------*/
+
+
+/*-------------------------TEST-------------------------*/
+.popup {
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: none;
+    overflow: scroll;
+    background-color: red;
+    z-index: 3;
+
+
+}
+
+
+
+.enkelt_event {
+    min-width: 100vw;
+
+
+}
+
+
+.enkelt_event img {
+    width: 70vw;
+    margin: 0 auto;
+
+}
+
+.enkelt_event p {
+    width: 80vw;
+}
+
+.enkelt_event h2 {
+    width: 80vw;
+}
+
+.luk {
+    top: 1vw;
+    left: 1vw;
+    right: 0rem;
+    position: fixed;
+    max-width: 0vw;
+}
+
+.luk button {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+/*-------------------------TEST-------------------------*/

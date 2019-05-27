@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="robots" content="noindex">
+
+    <title>Madstitches</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img id="logo" src="img/logo.svg"></a>
+        <div id="burger-button">
+            <div class="burger-bar"></div>
+            <div class="burger-bar"></div>
+            <div class="burger-bar"></div>
+        </div>
+
+    </header>
+
+    <!--    -----------------Filter menuen--------------------   -->
+    <div class="flexFilter">
+        <button id="filter-button"><img src="pics/filter.png" alt="filter">
+            <p>Filter</p>
+        </button>
+        <nav class="filtermenu">
+            <h3 class="du_ser dusersamlet">Du ser:</h3>
+            <h3 id="filter_tekst" class="dusersamlet">Alle</h3>
+            <div class="filterknap">
+                <button class="filter valgt" data-kat="alle">Alle</button>
+                <button class="filter" data-kat="Sjaelland">Sjaelland</button>
+                <button class="filter" data-kat="Fyn">Fyn</button>
+                <button class="filter" data-kat="Jylland">Jylland</button>
+            </div>
+        </nav>
+    </div>
+    <!--        ------------------Filter menuen-------------------  -->
+    <nav id="menu-left">
+        <a href="index.html">
+            <img id="logo" src="img/logo.svg"></a>
+        <ul>
+            <li><a href="index.html">Forside</a></li>
+            <li><a href="gallery.html">Galleri</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li>Punkt4</li>
+            <li>Punkt5</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="event_container">
+
+        </div>
+        <template id="event_template">
+            <div class="event_single">
+
+                <div class="event_billede">
+
+
+                    <div class="event_tekst_box">
+                        <h2 class="event_overskrift"></h2>
+                        <p class="event_tekst"></p>
+                        <p class="event_dato"></p>
+                        <p class="event_sted"></p>
+                    </div>
+                </div>
+
+
+            </div>
+        </template>
+
+
+    </main>
+    <div class="popup">
+        <div class="luk">
+            <button> X </button>
+            <div class="indhold"></div>
+        </div>
+    </div>
+
+
+    <footer>
+
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
